@@ -1,0 +1,282 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url("https://images.unsplash.com/photo-1612036782180-6f0b6cd846fe?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+}
+
+/* =============================================
+   BARRA LATERAL
+   ============================================= */
+.barra-l {
+    height: 100%;
+    width: 250px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgb(0, 0, 0);
+    z-index: 10;
+}
+
+.logo {
+    text-align: center;
+    width: 150px;
+    height: 150px;
+    overflow: hidden;
+    margin: 35px auto;
+}
+
+.logo img { width: 95%; }
+
+.nav-link { list-style: none; }
+
+.barra-l ul li a {
+    display: block;
+    font-family: system-ui, sans-serif;
+    padding: 25px 0 25px 25px;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-size: 20px;
+    position: relative;
+    color: white;
+}
+
+.barra-l li a:hover {
+    border-radius: 39px 0 0 40px;
+    background-color: rgba(253, 123, 2, 0.527);
+}
+/* =============================================
+   CONTENEDOR PRINCIPAL
+   ============================================= */
+.c_main {
+    margin-left: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+
+.carousel {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;  
+    gap: 40px;
+    padding: 40px 80px;
+    scrollbar-width: none;         
+    width: calc(100vw - 250px);    
+}
+
+.carousel::-webkit-scrollbar {
+    display: none;                  
+
+}
+.slide {
+    scroll-snap-align: center;      
+    width: 320px;
+    height: 480px;
+}
+.mini-carousel {
+    position: fixed;   
+    bottom: 0;         
+    left: 250px;       
+    width: calc(100vw - 250px);
+    overflow: hidden;
+    padding: 20px 40px;
+    background: rgba(0,0,0,0.3);
+}
+
+.mini-group {
+    display: flex;
+    gap: 20px;
+    width: max-content;
+    animation: miniScroll 25s linear infinite;
+}
+
+.mini-group img {
+    width: 180px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: transform 0.3s;
+}
+
+/* efecto hover */
+.mini-group img:hover {
+    transform: scale(1.1);
+}
+
+/* animación */
+@keyframes miniScroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+/* pausa */
+.mini-carousel:hover .mini-group {
+    animation-play-state: paused;
+}
+
+.flip-container {
+    width: 320px;
+    height: 480px;
+    perspective: 1000px;
+}
+
+.tarjeta {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 0.7s ease;
+    cursor: pointer;
+}
+
+.flip-container:hover .tarjeta {
+    transform: rotateY(180deg);
+}
+
+.frente, .atras {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    overflow: hidden;
+}
+
+.frente { background-color: #111; }
+
+.frente img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.nombre-overlay {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding: 20px 0;
+    background: rgba(0, 0, 0, 0.65);
+    color: rgb(255, 255, 255);
+    text-align: center;
+    font-size: 30px;
+    font-family: 'Bebas Neue', sans-serif;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+}
+
+.atras {
+    transform: rotateY(180deg);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 30px 25px;
+    color: white;
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.atras .foto-perfil img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid white;
+    margin-bottom: 10px;
+}
+
+.atras h2 {
+    font-size: 1.4rem;
+    margin-bottom: 12px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.atras p {
+    font-size: 15px;
+    line-height: 1.5;
+    margin-bottom: 20px;
+    opacity: 0.9;
+}
+
+.habilidades {
+    display: flex;
+    gap: 8px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.tag {
+    padding: 10px 16px;
+    border-radius: 60px;
+    font-size: 0.90rem;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+/* =============================================
+   PERFIL 1 — VENOM
+   ============================================= */
+.perfil_1 .atras { background-color: #0C1520; }
+.perfil_1 .atras h2 { color: #8E9599; }
+.perfil_1 .tag { background-color: #07006d; color: white; }
+
+/* =============================================
+   PERFIL 2 — JEFE MAESTRO
+   ============================================= */
+.perfil_2 .atras { background-color: #1a2a1a; }
+.perfil_2 .atras h2 { color: #7CFC00; }
+.perfil_2 .tag { background-color: #2e5e2e; color: white; }
+
+/* =============================================
+   PERFIL 3 — THANOS
+   ============================================= */
+.perfil_3 .atras { background-color: #1a0a2e; }
+.perfil_3 .atras h2 { color: #c084fc; }
+.perfil_3 .tag { background-color: #5b21b6; color: white; }
+
+/* =============================================
+   PERFIL 4 — OTRO ENEMIGO
+   ============================================= */
+.perfil_4 .atras { background-color: #000000; }
+.perfil_4 .atras h2 { color: #ff0000; }
+.perfil_4 .tag { background-color: #ee0404; color: white; }
+
+/* =============================================
+   PERFIL 5 — OTRO ENEMIGO
+   ============================================= */
+.perfil_5 .atras { background-color: #000000; }
+.perfil_5 .atras h2 { color: #ff0000; }
+.perfil_5 .tag { background-color: #ee0404; color: white; }
+
+ul li button {
+  display: block;
+  color: white;
+  padding: 14px 26px;
+  text-decoration: none;
+}
+ul li button{
+   border-color: #07006d;
+   border-radius: 10px;
+    background-color: #000000;
+  display: block;
+  color: white;
+  padding: 25px 50px;
+  text-decoration: none;
+    align-items: left;
+  margin: 0 25px;
+  margin-top: 15px;
+}

@@ -1,0 +1,268 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+.barra {
+    background-color: black;
+    color: white;
+    padding: 40px;
+    text-align: center;
+    width: 100%;
+    border-bottom: 1px solid rgb(0, 73, 0);
+}
+
+
+
+.c_main {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-image: url("https://m.media-amazon.com/images/I/71rHyBh21ZL._AC_SX679_.jpg");
+    gap: 40px;
+    padding: 60px 20px;
+}
+
+
+.flip-container {
+    width: 320px;
+    height: 480px;
+    perspective: 1000px;
+    
+}
+
+.tarjeta {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 0.7s ease;
+    cursor: pointer;
+}
+
+.flip-container:hover .tarjeta {
+    transform: rotateY(180deg);
+}
+
+.frente,.atras {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    overflow: hidden;
+}
+
+.frente {
+    background-color: #111;
+}
+
+.frente img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.nombre-overlay{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding: 14px 0;
+    background: rgba(0, 0, 0, 0.65);
+    color: rgb(15, 250, 128);
+    text-align: center;
+    font-size: 1.3rem;
+   font-family: 'Bebas Neue', sans-serif;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+}
+
+.atras {
+    transform: rotateY(180deg);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 30px 25px;
+    color: white;
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.atras .foto-perfil img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid white;
+    margin-bottom: 15px;
+}
+
+.atras h2 {
+    font-size: 1.4rem;
+    margin-bottom: 12px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.atras p {
+    font-size: 0.85rem;
+    line-height: 1.5;
+    margin-bottom: 20px;
+    opacity: 0.9;
+}
+
+.habilidades {
+    display: flex;
+    gap: 8px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.tag {
+    padding: 14px 12px;
+    border-radius: 50px;
+    font-size: 0.72rem;
+    font-weight: bold;
+}
+
+/* =============================================
+   PERFIL 1 — SPIDERMAN
+   ============================================= */
+
+.perfil_1 .atras {
+    background-color: rgb(75, 1, 1);
+}
+
+.perfil_1 .atras h2 {
+    color: #b30101;
+}
+
+.perfil_1 .tag {
+    background-color: #07006d;
+    color: white;
+}
+
+/* =============================================
+   PERFIL 2 — JEFE MAESTRO
+   ============================================= */
+
+.perfil_2 .atras {
+    background-color: rgb(82, 82, 82);
+}
+
+.perfil_2 .atras h2 {
+    color: #00e5ff;
+}
+
+.perfil_2 .tag {
+    background-color: #00e5ff;
+    color: #ffffff;
+}
+
+/* =============================================
+   PERFIL 3 — KRATOS
+   ============================================= */
+
+.perfil_3 .atras {
+    background-color: rgb(10, 10, 10);
+}
+
+.perfil_3 .atras h2 {
+    color: #c0392b;
+}
+
+.perfil_3 .tag {
+    background-color: #c0392b;
+    color: white;
+}
+
+.navbar {
+    display: flex;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 70px;
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    padding: 0 40px;
+    box-sizing: border-box;
+    z-index: 100;
+    margin: 0px;
+}
+
+.logo h1{
+    Width: 1000%;
+    display: flex; 
+    color: white; 
+    font-size: 20px; 
+    font-weight: bold;
+
+ }
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 40px;
+    margin: 500px;
+   
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+}
+ul li a {
+  display: block;
+  color: white;
+  padding: 14px 26px;
+  text-decoration: none;
+}
+.nav-links a:hover { color: #f4a261; } 
+footer {
+ background-color: #000000;
+  padding: 10px;
+  text-align: center;
+  color: white;
+    
+}
+
+.frente{
+    border-radius: 10%;
+    box-shadow: 16px 14px 200px #0000008c;
+   
+}
+.nav-links{
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+}
+ul li button {
+  display: block;
+  color: white;
+  padding: 14px 26px;
+  text-decoration: none;
+}
+ul li button{
+   border-color: #07006d;
+   border-radius: 10px;
+    background-color: #000000;
+  display: block;
+  color: white;
+  padding: 14px 26px;
+  text-decoration: none;
+}
+.fondo {
+    display: flex;
+    width: 100%;
+    z-index: -1;
+}

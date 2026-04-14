@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contenido — X_Forcer</title>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Rajdhani:wght@400;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles3.css">
+</head>
+
+<body>
+
+    <!-- ── NAV ──────────────────────────────────────────────────────── -->
+    <nav>
+        <a class="nav-logo" href="index.html">X_FORCER</a>
+        <ul class="nav-links">
+            <li><a href="index.html">Héroes</a></li>
+            <li><a href="enemigos.html">Enemigos</a></li>
+            <li><a href="contenido.html" class="btn-nav">Galería</a></li>
+        </ul>
+    </nav>
+
+    <!-- ── HERO ─────────────────────────────────────────────────────── -->
+    <section class="hero-section">
+        <p class="hero-label">Teams heroe and enemy</p>
+        <h1 class="hero-title">HÉROES &<br><span>VILLANOS</span></h1>
+        <p class="hero-sub">Todos los personajes del universo X_Forcer. Pasa el cursor sobre cada tarjeta para ver su
+            perfil.</p>
+    </section>
+
+    <!-- ── STATS ─────────────────────────────────────────────────────── -->
+    <div class="stats-bar">
+        <div class="stat-item">
+            <span class="stat-num verde">3</span>
+            <span class="stat-label">Héroes</span>
+        </div>
+        <div class="stat-item">
+            <span class="stat-num rojo">4</span>
+            <span class="stat-label">Villanos</span>
+        </div>
+        <div class="stat-item">
+            <span class="stat-num" style="color:#f4a261">7</span>
+            <span class="stat-label">Total</span>
+        </div>
+        <div class="stat-item">
+            <span class="stat-num" style="color:#a0aec0">3</span>
+            <span class="stat-label">Universos</span>
+        </div>
+    </div>
+
+    <!-- ── FILTROS ───────────────────────────────────────────────────── -->
+    <div class="filtros">
+        <button class="filtro-btn activo" data-filtro="todos">Todos</button>
+        <button class="filtro-btn" data-filtro="heroe">Héroes</button>
+        <button class="filtro-btn villano" data-filtro="villano">Villanos</button>
+    </div>
+
+    <!-- ── GALERÍA GRID ──────────────────────────────────────────────── -->
+    <div class="galeria" id="galeria">
+
+        <!-- SPIDERMAN -->
+        <div class="card-wrapper heroe" data-tipo="heroe">
+            <div class="card">
+                <div class="cara cara-front">
+                    <img src="https://cdn.shopify.com/s/files/1/0299/5476/9034/files/Spiderman_iPhone_Wallpaper_Background___EPIC_Goods_600x600.jpg?v=1711189204"
+                        alt="Spiderman">
+                    <span class="badge heroe">Héroe</span>
+                    <div class="overlay-nombre">Spiderman</div>
+                </div>
+                <div class="cara cara-back">
+                    <img class="avatar" src="https://images.alphacoders.com/134/1347144.png" alt="Spiderman">
+                    <h3>Spiderman</h3>
+                    <p>Joven con poderes de araña que equilibra su vida personal con proteger Nueva York.</p>
+                    <a class="link-mas" href="https://es.wikipedia.org/wiki/Spider-Man" target="_blank">Más info</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- JEFE MAESTRO -->
+        <div class="card-wrapper heroe" data-tipo="heroe">
+            <div class="card">
+                <div class="cara cara-front">
+                    <img src="https://wallpapers.com/images/hd/halo-master-chief-pzj0adtn7823szil.jpg"
+                        alt="Master Chief">
+                    <span class="badge heroe">Héroe</span>
+                    <div class="overlay-nombre">Jefe Maestro</div>
+                </div>
+                <div class="cara cara-back">
+                    <img class="avatar" src="https://wallpapers.com/images/hd/hd-video-game-halo-fnqqitkdh2nf8hfa.jpg"
+                        alt="Master Chief">
+                    <h3>Jefe Maestro</h3>
+                    <p>Supersoldado Spartan blindado, última esperanza de la humanidad frente a amenazas galácticas.</p>
+                    <a class="link-mas" href="https://es.wikipedia.org/wiki/Master_Chief" target="_blank">Más info</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- KRATOS -->
+        <div class="card-wrapper heroe" data-tipo="heroe">
+            <div class="card">
+                <div class="cara cara-front">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRHfim3ILyQXkLAosel3qG_1VlpNZiaoPZwVQ&s"
+                        alt="Kratos">
+                    <span class="badge heroe">Héroe</span>
+                    <div class="overlay-nombre">Kratos</div>
+                </div>
+                <div class="cara cara-back">
+                    <img class="avatar"
+                        src="https://static.wikia.nocookie.net/godofwar/images/d/dc/Kratos.jpg/revision/latest/scale-to-width/360?cb=20160326181156&path-prefix=es"
+                        alt="Kratos">
+                    <h3>Kratos</h3>
+                    <p>Antiguo dios griego de la guerra que busca redención como mejor padre en el mundo nórdico.</p>
+                    <a class="link-mas" href="https://es.wikipedia.org/wiki/Kratos_(personaje)" target="_blank">Más
+                        info</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- VENOM -->
+        <div class="card-wrapper villano" data-tipo="villano">
+            <div class="card">
+                <div class="cara cara-front">
+                    <img src="https://wallpaper.forfun.com/fetch/8f/8fb16d64c68015d0d6685419f7ff5414.jpeg" alt="Venom">
+                    <span class="badge villano">Villano</span>
+                    <div class="overlay-nombre">Venom</div>
+                </div>
+                <div class="cara cara-back">
+                    <img class="avatar"
+                        src="https://img.asmedia.epimg.net/resizer/v2/TLMC7OT6M5AJLFGEPQVJY5GO44.jpg?auth=e41356a12d4f521fcbf38779e04c054b98e868a715373d9248610435cb8340ba&width=644&height=362&smart=true"
+                        alt="Venom">
+                    <h3>Venom</h3>
+                    <p>Simbionte alienígena de Marvel que necesita un huésped. Unido a Eddie Brock para atormentar a
+                        Spider-Man.</p>
+                    <a class="link-mas" href="https://es.wikipedia.org/wiki/Venom_(Marvel)" target="_blank">Más info</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- THANOS -->
+        <div class="card-wrapper villano" data-tipo="villano">
+            <div class="card">
+                <div class="cara cara-front">
+                    <img src="https://media.gq.com.mx/photos/5dec0db85b7e8300097bca15/1:1/w_600,h_600,c_limit/thanos-bebe-marvel.jpg"
+                        alt="Thanos">
+                    <span class="badge villano">Villano</span>
+                    <div class="overlay-nombre">Thanos</div>
+                </div>
+                <div class="cara cara-back">
+                    <img class="avatar"
+                        src="https://stereociendigital.com.mx/wp-content/uploads/2025/11/Regresa-Thanos-Josh-Brolin-revela-quien-podria-convencerlo-de-volver-al-MCU.jpg"
+                        alt="Thanos">
+                    <h3>Thanos</h3>
+                    <p>El titán que busca equilibrar el universo eliminando la mitad de toda vida con las Gemas del
+                        Infinito.</p>
+                    <a class="link-mas" href="https://es.wikipedia.org/wiki/Thanos" target="_blank">Más info</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- DARTH VADER -->
+        <div class="card-wrapper villano" data-tipo="villano">
+            <div class="card">
+                <div class="cara cara-front">
+                    <img src="https://www.pixelstalk.net/wp-content/uploads/2025/08/Darth-Vader-Wallpaper-HD-for-Mac.jpg"
+                        alt="Darth Vader">
+                    <span class="badge villano">Villano</span>
+                    <div class="overlay-nombre">Darth Vader</div>
+                </div>
+                <div class="cara cara-back">
+                    <img class="avatar" src="https://images6.alphacoders.com/100/thumb-1920-1006239.jpg"
+                        alt="Darth Vader">
+                    <h3>Darth Vader</h3>
+                    <p>Señor Sith, antes conocido como Anakin Skywalker. El más temido del Imperio Galáctico.</p>
+                    <a class="link-mas" href="https://es.wikipedia.org/wiki/Darth_Vader" target="_blank">Más info</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- JEFE MAESTRO VILLANO -->
+        <div class="card-wrapper villano" data-tipo="villano">
+            <div class="card">
+                <div class="cara cara-front">
+                    <img src="https://i.imgur.com/e8lmoTx.jpg" alt="Ultron">
+                    <span class="badge villano">Villano</span>
+                    <div class="overlay-nombre">Ultron</div>
+                </div>
+                <div class="cara cara-back">
+                    <img class="avatar"
+                        src="https://i.redd.it/update-on-the-ultron-fan-art-v0-gddl7lrfnluf1.jpg?width=550&format=pjpg&auto=webp&s=b5057ca1c4734bcc2cad2ad0e3b294969cf773de"
+                        alt="Ultron">
+                    <h3>Ultron</h3>
+                    <p>Soldado definitivo. Dependiendo del bando, puede ser el mayor aliado o la amenaza más letal.</p>
+                    <a class="link-mas" href="https://es.wikipedia.org/wiki/Master_Chief" target="_blank">Más info</a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- ── NAV INFERIOR ──────────────────────────────────────────────── -->
+    <div class="nav-bottom">
+        <a href="index.html">← Héroes</a>
+        <a href="enemigos.html">Enemigos →</a>
+    </div>
+
+    <!-- ── JS FILTROS ────────────────────────────────────────────────── -->
+    <script>
+        const btns = document.querySelectorAll('.filtro-btn');
+        const cards = document.querySelectorAll('.card-wrapper');
+
+        btns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                btns.forEach(b => b.classList.remove('activo'));
+                btn.classList.add('activo');
+
+                const filtro = btn.dataset.filtro;
+
+                cards.forEach(card => {
+                    if (filtro === 'todos' || card.dataset.tipo === filtro) {
+                        card.classList.remove('oculta');
+                    } else {
+                        card.classList.add('oculta');
+                    }
+                });
+            });
+        });
+    </script>
+
+</body>
+
+</html>
